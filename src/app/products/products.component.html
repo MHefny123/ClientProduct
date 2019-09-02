@@ -1,14 +1,15 @@
 <div class="example-container mat-elevation-z8">
-  <div class="example-loading-shade"
-       *ngIf="isLoadingResults">
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
   <div class="button-row">
-    <a mat-flat-button color="primary" [routerLink]="['/product-add']"><mat-icon>add</mat-icon></a>
+    <a mat-flat-button color="primary" [routerLink]="['/product-add']">
+      <mat-icon>add</mat-icon>
+    </a>
   </div>
   <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="data" class="example-table"
-           matSort matSortActive="prodname" matSortDisableClear matSortDirection="asc">
+    <table mat-table [dataSource]="data" class="example-table" matSort matSortActive="prodname" matSortDisableClear
+      matSortDirection="asc">
 
       <!-- Product Name Column -->
       <ng-container matColumnDef="prodName">
@@ -25,13 +26,13 @@
 
 
 
-      
-      <td class="example-table">  
-        <button type="button" class="btn btn-info"matTooltip="Click Edit Button"(click)="loadEmployeeToEdit(employee.EmpId)">Edit</button>  
-      </td>  
-      <td class="example-table">  
-        <button type="button" class="btn btn-danger"matTooltip="Click Delete Button"(click)="deleteEmployee(employee.EmpId)">Delete</button>  
-      </td>  
+
+      <td class="example-table">
+        <button type="button" class="btn btn-info" matTooltip="Click Edit Button">Edit</button>
+      </td>
+      <td class="example-table">
+        <button type="button" class="btn btn-danger" matTooltip="Click Delete Button">Delete</button>
+      </td>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/product-details/', row.id]"></tr>
