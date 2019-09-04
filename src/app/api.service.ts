@@ -12,7 +12,8 @@ const httpOptions = {
 
 // Back to Original Version 
 
-const apiUrl = "https://localhost:5001/api/Product";
+// const apiUrl = "https://localhost:5001/api/Product";
+const apiUrl = "http://192.168.1.107:5080/api/Product";
 
 @Injectable({
   providedIn: 'root'
